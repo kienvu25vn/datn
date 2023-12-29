@@ -11,7 +11,7 @@ from stardist.models import StarDist2D
 import base64
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://45.118.144.26:5173", "http://0.0.0.0:5173"])
 
 @app.route('/segmentation', methods=['POST'])
 def get_image():
