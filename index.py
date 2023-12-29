@@ -4,13 +4,10 @@ from io import BytesIO
 from flask_cors import CORS
 import numpy as np
 import matplotlib.pyplot as plt
-import json
-import cv2
 from PIL import Image
 from csbdeep.utils import normalize
 from stardist import random_label_cmap
 from stardist.models import StarDist2D
-from stardist import _draw_polygons
 import base64
 
 app = Flask(__name__)
@@ -87,4 +84,4 @@ def convert_tiff_to_png():
     return Response(output_buffer, content_type='image/png')
 
 if __name__ == '__main__':
-    app.run(host='45.118.144.26', port=5002)
+    app.run(host='0.0.0.0', port=5002)
