@@ -8,7 +8,7 @@
             </div> 
         </div>
         <span v-if="!model.image" class="caution">Please upload image with jpg, png or tif format and less than 10mb</span>
-        <div v-if="!model.image" class="sample">
+        <!-- <div v-if="!model.image" class="sample">
             <span>SAMPLE IMAGES</span>
             <div class="sample__box">
                 <div class="sample__item--diamond">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             
-        </div>
+        </div> -->
         <div class="link-back">
             <span v-if="model.image" @click="this.model.image = null, this.model.imageRes = null">Try new image</span>
         </div>
