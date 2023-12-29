@@ -133,7 +133,7 @@ export default {
                     formData.append('tiff_file', file);
 
                     try {
-                        const response = await axios.post('http://127.0.0.1:5002/convert', formData, {
+                        const response = await axios.post('http://127.0.0.1:5005/convert', formData, {
                             headers: {
                             'Content-Type': 'multipart/form-data'
                             },
@@ -176,7 +176,7 @@ export default {
                 this.notAllowed = true;
                 try {
                     var startTime = performance.now()
-                    const response = await axios.post('http://127.0.0.1:5002/segmentation', formData, {
+                    const response = await axios.post('http://127.0.0.1:5005/segmentation', formData, {
                         headers: {
                             'Content-Type': 'multipart/form-data'
                         },
