@@ -14,7 +14,7 @@ from stardist import _draw_polygons
 import base64
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])
+CORS(app, origins=["http://45.118.144.26:5173"])
 
 @app.route('/segmentation', methods=['POST'])
 def get_image():
@@ -87,4 +87,4 @@ def convert_tiff_to_png():
     return Response(output_buffer, content_type='image/png')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5002)
+    app.run(host='45.118.144.26', port=5002)
